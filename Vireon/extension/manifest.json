@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Vireon",
+  "version": "1.0",
+  "description": "Filtra y redacta correos con IA.",
+  "permissions": ["identity", "storage"],
+  "host_permissions": ["https://www.googleapis.com/"],
+  "oauth2": {
+    "client_id": "916833737676-2eu9kmrbdog7sv2911qroi4ipu60cdjt.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.modify",
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "externally_connectable": {
+    "matches": ["*://*.google.com/*"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  }
+}
