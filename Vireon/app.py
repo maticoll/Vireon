@@ -149,12 +149,12 @@ def send_to_webhook(message_data):
         )
         
         if response.ok:
-            print(f"✅ Webhook sent successfully for message: {message_data['messageId']}")
+            print(f"Webhook sent successfully for message: {message_data['messageId']}")
         else:
-            print(f"❌ Webhook failed for message: {message_data['messageId']}")
+            print(f"Webhook failed for message: {message_data['messageId']}")
             
     except Exception as e:
-        print(f"❌ Error sending to webhook: {e}")
+        print(f"Error sending to webhook: {e}")
 
 @app.route('/api/auth/validate', methods=['POST'])
 def validate_token():
@@ -204,7 +204,7 @@ def register_user():
         return jsonify({'status': 'ok', 'message': 'Usuario registrado'}), 200
 
     except Exception as e:
-        print(f"❌ Error al registrar usuario: {e}")
+        print(f"Error al registrar usuario: {e}")
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
