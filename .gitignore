@@ -1,0 +1,37 @@
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+
+# Archivos de configuración local
+*.env
+*.local
+.env.*
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y bases temporales
+*.log
+*.sqlite3
+
+# Archivos de compilación
+*.egg-info/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Node (si usás algo de frontend en la extensión)
+node_modules/
+
+# Otros
+*.bak
+*.orig
